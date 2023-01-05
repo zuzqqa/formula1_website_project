@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formula 1- my hobby</title>
+    <link rel="icon" href="Logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="sheet.css" />
+    <script src="script.js" defer></script>
+    <link
+      href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+      .ui-widget-header {
+        background: #4e8e91;
+        border: 1px solid #dddddd;
+        color: #333333;
+        font-weight: bold;
+        width: 90%;
+      }
+    </style>
+
+    <script>
+      window.addEventListener("load", (event) => {
+        $("#progressbar-2").css("visibility", "visible");
+      });
+      $(function () {
+        var progressbar = $("#progressbar-2");
+        $("#progressbar-2").progressbar({
+          value: 0,
+          max: 260,
+        });
+        $("#progressbar-2").click(function progress() {
+          var val = progressbar.progressbar("value") || 0;
+          progressbar.progressbar("value", val + 10);
+          if (val < 260) {
+            setTimeout(progress, 100);
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+   
+
+    <nav class="navBar">
+      <div class="logo">
+        <a href="index.html"><img src="Logo.png" alt="Logo"></a>
+      </div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="nav_links">
+        <ul>
+          <li>
+            <a href="contact.html">contact</a>
+            <div class="underline"></div>
+          </li>
+          <li>
+            <a href="standings.html">standings</a>
+            <div class="underline"></div>
+          </li>
+          <li class="dropdown">
+            <a id="dropdown">history</a>
+            <div class="underline"></div>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="history.html">history</a></li>
+                <li><a class="nav_r" href="highlights.html">2022 highlights</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="cars.html">cars</a>
+            <div class="underline"></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="header hidden">
+      <p>2022 CARS</p>
+    </div>
+
+    <section class="cars_section hidden">
+      <div class="container_3">
+        <div class="content_2">
+          <h1 class="cars_heading">OVER-WHEEL WINGLETS AND WHEEL COVERS</h1>
+          <p class="content_cars">
+            two of the striking features on the 2022 car are its over-wheel
+            winglets and a return to a feature last seen in f1 in 2009 - wheel
+            covers.
+          </p>
+        </div>
+        <div class="rec"></div>
+        <div class="img_2"><img src="over-wheels.png" alt="over wheels" /></div>
+      </div>
+    </section>
+
+    <section class="cars_section_1">
+      <div class="driver_1"><img src="driver_1.png " alt="driver icon" /></div>
+      <div class="content_2_1 hidden">
+        <p class="content_cars">
+          the inclusion of the latter is simple: sending airflow through the
+          wheels might be an enormously potent way for teams to increase their
+          downforce, but it also adds to that chaotic aerodynamic wake coming
+          off the cars.
+        </p>
+      </div>
+    </section>
+
+    <div class="cd hidden">
+      <h1 class="cars_heading_1">18-INCH LOW-PROFILE TYRES</h1>
+    </div>
+
+    <div class="cd hidden"><h1 class="cars_heading_2">FRONT WING AND NOSE</h1></div>
+
+    <section class="cars_section_2 hidden">
+      <div class="container_4">
+        <div class="img_3"><img src="merc.png" alt="mercedes car" /></div>
+        <div class="rec_1"></div>
+        <div class="content_3">
+          <p class="content_cars_3">
+            two of the striking features on the 2022 car are its over-wheel
+            winglets and a return to a feature last seen in f1 in 2009 - wheel
+            covers.
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="cd hidden"><h1 class="cars_heading_2">MORE SUSTAINABLE FUEL</h1></div>
+
+    <div class="content_4 hidden">
+      <p class="content_cars">
+        and while F1 is still working hard to introduce fully sustainable fuel
+        in the near-future, 2022 will see the bio-component ratio rise to 10%.
+        that will be achieved through a move to 'E10 fuel' - 'E' standing for
+        ethanol, while '10' refers to its percentage in the mixture.
+      </p>
+    </div>
+
+    <div class="cd hidden"><h1 class="cars_heading_1">AERO FUTURE</h1></div>
+    <div class="content_5 hidden">
+      <p class="content_cars_5">
+        current cars' barge boards and other bits of aerodynamic furniture are
+        designed to send vortices under the floor to increase downforce. but
+        when those vortices stop working - due, for example, to the influence of
+        closely following another car - the performance drop-off is huge.
+      </p>
+    </div>
+
+    <section class="cars_section_3 hidden">
+      <div class="container_5">
+        <div class="img_4">
+          <img src="img_4.png" alt="old ferrari f1 car" />
+        </div>
+        <div class="rec_2"></div>
+      </div>
+    </section>
+
+    <br><br>  
+    <div class="driver_2 "><img src="driver2.png " alt="driver icon" /></div>
+
+    <section class="cars_section_4 hidden">
+      <div class="container_6">
+        <div class="content_6">
+          <div class="p_1">GO</div>
+          <div class="p_2">TO</div>
+        </div>
+        <div class="img_5">
+          <a href="standings.html"><img src="bet1.png" alt="helmet" /></a>
+        </div>
+      </div>
+    </section>
+
+    <h1 class="cars_heading_2 hidden">
+      The current crop of Formula 1 cars can accelerate from 0-100 km/h in
+      about 2.6 seconds. [click below]
+    </h1>
+
+    <div id="progressbar-2"></div>
+
+    <footer class="grid_footer">
+      <a class="first_footer" href="index.html">FORMULA 1</a>
+      <a class="second_footer" href="index.html">MY HOBBY</a>
+      <div class="third_footer">
+        <img src="logof1.png" alt="logo Formuly 1" />
+      </div>
+      <a class="fourth_footer" href="index.html">FORMULA</a>
+      <a class="fifth_footer" href="index.html">HOME</a>
+      <a class="sixth_footer" href="index.html">ABOUT</a>
+      <a class="seventh_footer" href="standings.html">STANDINGS</a>
+      <a class="eleventh_footer" href="contact.html">CONTACT</a>
+      <a class="thirteenth_footer" href="mailto:s193165@student.pg.edu.pl"
+        >EMAIL</a
+      >
+      <a
+        class="fourteenth_footer"
+        href="https://github.com/zuzqqa"
+        target="_blank"
+        >GITHUB</a
+      >
+      <a
+        class="fifteenth_footer"
+        href="https://www.instagram.com/zuuzqqa/"
+        target="_blank"
+        >INSTAGRAM</a
+      >
+      <a class="seventeenth_footer" href="https://twitter.com/home" target="_blank"
+        >TWITTER</a
+      >
+      <a class="eighteenth_footer" href="#form_j">JOIN OUR COMMUNITY</a>
+
+      <button id="bute">SIGN UP!</button>
+    </footer>
+
+    <div class="res_footer">
+      <br><br>
+      <button id="bute1">SIGN UP!</button>
+      <a class="fourth_footer" href="#top">CARS</a>
+      <a class="fifth_footer" href="index.html">HOME</a>
+      <a class="eleventh_footer" href="contact.html">CONTACT</a>
+      <a
+        class="fourteenth_footer"
+        href="https://github.com/zuzqqa"
+        target="_blank"
+        >GITHUB</a
+      >
+      <br><br>
+    </div>
+
+
+    <dialog id="input_1">
+      <input id="input_1_3" type="text" name="e-mail" />
+      <button id="sub">SUBMIT</button>
+    </dialog>  
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hipertext SYSTEM "hih.dtd"> 
+<hipertext>
+	<student>
+		<name>Zuzanna</name>
+		<surname>Nowak</surname>
+    </student>
+
+	<definition>
+		Formula 1 is the most famous motorsport.
+	</definition>
+	
+	<date>
+		2022-11-29
+	</date>
+
+	<drivers>
+		<driver top3="yes" top5="yes" worldchampion="yes">
+			<name>Max</name>
+			<surname>Verstappen</surname>
+			<number>1</number>
+			<id>134-143-234-999</id>
+            <position>1</position>
+			<aboutDriver>
+				<age>25</age>
+				<country>The Netherlands</country>
+			</aboutDriver>
+			<image source="max_ver.png">Max Verstappen</image>
+			<link source="https://www.formula1.com/en/results.html/2022/races/1125/saudi-arabia/race-result.html">Saudi Arabia</link>
+			<achievements wonArace="yes">
+				<achievement championship="yes">
+					<title>2021 WDC</title>
+					<description>
+						Max won championship after thrilling and controversial race in Abu Dhabi.
+					</description>
+					<image source="image10.png">Max fought Hamilton</image>
+				</achievement>
+                <achievement championship="yes">
+					<title>2022 WDC</title>
+					<description>
+						Max won championship in Japan after dominating the whole season.
+					</description>
+					<image source="max_championship.jpg">Project of Memex</image>
+				</achievement>
+			</achievements>
+		</driver>
+		<driver top3="yes" top5="yes" worldchampion="yes">
+			<name>Charles</name>
+			<surname>Leclerc</surname>
+			<number>Two</number>
+			<id>1934-1432-2345</id>
+            <position>2</position>
+			<aboutDriver>
+				<age>25</age>
+				<country>Monaco</country>
+			</aboutDriver>
+			<image source="charles_lec.png">Charles Leclerc</image>
+			<link source="https://www.formula1.com/en/drivers/charles-leclerc.html">Charles Leclerc</link>
+			<achievements wonArace="yes">
+				<achievement championship="no">
+					<title>Vice World Champion</title>
+					<description>
+						He fought with Checo Perez until the very end of the season but managed to secure his second position in WDC classification.
+					</description>
+					<image source="france_leclerc.jpg">Crucial moment of the season- Charles crashes in France, after which many happen to consider this event as the breaking point of his and Max's battle for WDC</image>
+				</achievement>
+			</achievements>
+		</driver>
+        <driver top3="yes" top5="yes" worldchampion="no">
+			<name>Checo</name>
+			<surname>Perez</surname>
+			<number>Three</number>
+			<id>1934-1432-2345</id>
+            <position>3</position>
+			<aboutDriver>
+				<age>32</age>
+				<country>Mexico</country>
+			</aboutDriver>
+			<image source="sergio_per.png">Checo Perez</image>
+			<link source="https://www.formula1.com/en/drivers/sergio-perez.html">Checo Perez</link>
+			<achievements wonArace="yes">
+				<achievement championship="no">
+					<title>3rd place in WDC</title>
+					<description>
+						Perez took the third position as F1 2022 season came to the end.
+					</description>
+					<image source="monaco_gp.png">Checo won memorable 2022 Monaco GP</image>
+				</achievement>
+			</achievements>
+		</driver>
+	</drivers>
+    <teams>
+        <team worldchampion="yes">
+			<nameMix>
+			<name>Reb Bull</name>
+			<name>Red Bull Racing</name>
+            <position>1</position>
+			</nameMix>
+            <about>
+				<description>Red Bull is mainly assosciated with energy drinks but it is also one of the best formula 1 teams ever.</description>
+				<championships>2022 2019 2012 2000 2012</championships>
+			</about>
+            <image source="redbull.png">Red Bull logo</image>
+        </team>
+        <team worldchampion="yes">
+			<nameMix>
+            <name>Ferrari</name>
+            <position>2</position>
+			</nameMix>
+            <about>
+				<description>Ferarri is probably the most popular formula 1 team. It's impact on motorsport is unquestioned. ,,Everyone is a Ferrari fan. Even if they say they're not, they are Ferrari fans.</description>
+				<championships>2022 2019 2012 2000 2012</championships>	
+			</about>
+			<image source="ferrari.png">Ferrari logo</image>
+        </team>
+        <team worldchampion="no">
+			<nameMix>
+            <name>Mercedes</name>
+            <position>3</position>
+			</nameMix>
+            <about>
+				<description>Mercedes is a germany team.</description>
+				<championships>2022 2019 2012 2000 2012</championships>
+			</about>
+            <image source="merc.png">Mercedes logo</image>
+        </team>
+    </teams>
+</hipertext>

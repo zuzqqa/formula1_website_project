@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formula 1- my hobby</title>
+    <link rel="icon" href="Logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="sheet.css" />
+    <script src="script.js" defer></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.marker-animation/build/index.min.js"></script>
+    <script type="text/javascript">
+      window.addEventListener("load", (event) => {
+        $(".scroll_but").css("visibility", "visible");
+      });
+
+      $(function () {
+        $(".marker-animation").markerAnimation();
+      });
+      $(".marker-animation").markerAnimation({
+        color: "#fe9",
+        padding_bottom: ".1em",
+        thickness: ".6em",
+        font_weight: "bold",
+        stripe: false,
+        stripe_thickness: 2,
+        rtl: false,
+        delay: ".1s",
+        duration: "2s",
+        function: "ease",
+        repeat: false,
+        cssFilter: function (css) {
+          return css;
+        },
+      });
+    </script>
+  </head>
+
+  <body>
+    <nav class="navBar">
+      <div class="logo">
+        <a href="index.html"><img src="Logo.png" alt="Logo"></a>
+      </div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+
+      </a>
+      <div class="nav_links">
+        <ul>
+          <li>
+            <a href="contact.html">contact</a>
+            <div class="underline"></div>
+          </li>
+          <li>
+            <a href="standings.html">standings</a>
+            <div class="underline"></div>
+          </li>
+          <li class="dropdown">
+            <a id="dropdown">history</a>
+            <div class="underline"></div>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="history.html">history</a></li>
+                <li><a class="nav_r" href="highlights.html">2022 highlights</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="cars.html">cars</a>
+            <div class="underline"></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="header hidden">
+      <p>STANDINGS</p>
+    </div>
+    <br />
+    <h1 class="heading_c hidden">DRIVERS</h1>
+    <div class="und hidden"></div>
+    <br />
+    <br />
+    <div class="rec_8"></div>
+    <section class="onetthree">
+      <div class="third hidden">
+        <div class="img_stand_3">
+          <img src="charles_lec.png" alt="Charles Leclerc" />
+        </div>
+        <br />
+        <div class="label_3">CHARLES LECLERC</div>
+      </div>
+      <div class="first hidden">
+        <div class="img_stand_1">
+          <img src="max_ver.png" alt="Max Verstappen" />
+        </div>
+        <br />
+        <div class="label_1">MAX VERSTAPPEN</div>
+      </div>
+      <div class="second hidden">
+        <div class="img_stand_2">
+          <img src="sergio_per.png" alt="Sergio Perez" />
+        </div>
+        <br />
+        <div class="label_2">SERGIO PEREZ</div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <section class="standings_1 hidden">
+      <div class="label_s hidden">
+        <div class="circle_s"><p class="text_s">4</p></div>
+        <div class="label_name">FERNANDO ALONSO</div>
+      </div>
+      <div class="label_s hidden">
+        <div class="circle_s"><p class="text_s">5</p></div>
+        <div class="label_name">LEWIS HAMILTON</div>
+      </div>
+      <section id="andrew" ></section>
+      <br />
+    </section>
+    <section class="standings_1">
+      <div onclick="expand_x_1()" id="btn2" class="scroll_but hidden">
+        <svg height="100" width="100">
+          <line
+            x1="0"
+            y1="0"
+            x2="50"
+            y2="50"
+            style="stroke: rgb(255, 255, 255); stroke-width: 20"
+          />
+          <circle cx="50" cy="50" r="10" stroke-width="2" fill="white" />
+          <line
+            x1="100"
+            y1="0"
+            x2="50"
+            y2="50"
+            style="stroke: rgb(255, 255, 255); stroke-width: 20"
+          />
+        </svg>
+      </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <div class="jquery_f hidden">
+      <span class="marker-animation" data-ma_repeat="true"
+        >Max Verstappen and Red Bull are Formula 1 2022 World Champions!!!</span
+      >
+    </div>
+    <br />
+    <br />
+    <br />
+    <h1 class="heading_c hidden">TEAMS</h1>
+    <div class="und hidden"></div>
+    <br />
+    <br />
+    <div class="rec_9"></div>
+    <section class="onetthree hidden">
+      <div class="second">
+        <div class="img_stand_2"><img src="ferrari.png" alt="Ferrari" /></div>
+        <br />
+        <div class="label_2">FERRARI</div>
+      </div>
+      <div class="first">
+        <div class="img_stand_1"><img src="redbull.png" alt="Reb Bull" /></div>
+        <br />
+        <div class="label_1">RED BULL</div>
+      </div>
+      <div class="third">
+        <div class="img_stand_3">
+          <img src="mercedesAMD.png" alt="Mercedes AMG" width="300" />
+        </div>
+        <br />
+        <div class="label_3">MERCEDES</div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <section class="standings_1 hidden">
+      <div class="label_s ">
+        <div class="circle_s"><p class="text_s">4</p></div>
+        <div class="label_name">ALPINE</div>
+      </div>
+      <div class="label_s ">
+        <div class="circle_s"><p class="text_s">5</p></div>
+        <div class="label_name">MCLAREN</div>
+      </div>
+      <section id="andrew2"></section>
+      <br />
+    </section>
+    <section class="standings_1">
+      <div onclick="expand_x_2()" id="btn1" class="scroll_but hidden">
+        <svg height="100" width="100">
+          <line
+            x1="0"
+            y1="0"
+            x2="50"
+            y2="50"
+            style="stroke: rgb(255, 255, 255); stroke-width: 20"
+          />
+          <circle cx="50" cy="50" r="10" stroke-width="2" fill="white" />
+          <line
+            x1="100"
+            y1="0"
+            x2="50"
+            y2="50"
+            style="stroke: rgb(255, 255, 255); stroke-width: 20"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <script>
+      const drivers = [
+        "ZHOU GUANYU",
+        "GEORGE RUSSELL",
+        "LANDO NORRIS",
+        "ALEXANDER ALBON",
+        "NICHOLAS LATIFI",
+        "MICK SCHUMACHER",
+        "NYCK DE VRIES",
+        "CARLOS SAINZ JR.",
+        "SEBASTIAN VETTEL",
+        "PIERRE GASLY",
+        "YUKI TSUNODA",
+        "VALTTERI BOTTAS",
+        "DANIEL RICCIARDO",
+        "KEVIN MAGNUSSEN",
+        "NICO HÜLKENBERG",
+        "ESTEBAN OCON",
+      ];
+      const teams = [
+        "HAAS",
+        "ASTON MARTIN",
+        "WILLIAMS",
+        "ALPHA TAURI",
+        "ALFA ROMEO",
+      ];
+      function expand_x_1() {
+        for (let i = 0; i < drivers.length; i++) {
+          var x = document.createElement("div");
+          var y = document.createElement("div");
+          var r = document.createElement("p");
+          var z = document.createElement("div");
+
+          y.className = "circle_s";
+          r.className = "text_s";
+          x.className = "label_s";
+          z.className = "label_name";
+
+          x.appendChild(y);
+          y.appendChild(r);
+          x.appendChild(z);
+
+          r.innerHTML = 6 + i;
+          z.innerHTML = drivers[i];
+
+          var v = document.getElementById("andrew");
+          v.appendChild(x);
+        }
+      }
+      function expand_x_2() {
+        for (let i = 0; i < teams.length; i++) {
+          var x = document.createElement("div");
+          var y = document.createElement("div");
+          var r = document.createElement("p");
+          var z = document.createElement("div");
+
+          y.className = "circle_s";
+          r.className = "text_s";
+          x.className = "label_s";
+          z.className = "label_name";
+
+          x.appendChild(y);
+          y.appendChild(r);
+          x.appendChild(z);
+
+          r.innerHTML = 6 + i;
+          z.innerHTML = teams[i];
+
+          var v = document.getElementById("andrew2");
+          v.appendChild(x);
+        }
+      }
+    </script>
+ <dialog id="input_1">
+  <input id="input_1_3" type="text" name="e-mail" />
+  <button id="sub">SUBMIT</button>
+</dialog>
+
+<footer class="grid_footer">
+  <a class="first_footer" href="index.html">FORMULA 1</a>
+  <a class="second_footer" href="index.html">MY HOBBY</a>
+  <div class="third_footer">
+    <img src="logof1.png" alt="logo Formuly 1" />
+  </div>
+  <a class="fourth_footer" href="index.html">FORMULA</a>
+  <a class="fifth_footer" href="index.html">HOME</a>
+  <a class="sixth_footer" href="index.html">ABOUT</a>
+  <a class="seventh_footer" href="#top">STANDINGS</a>
+  <a class="eleventh_footer" href="contact.html">CONTACT</a>
+  <a class="thirteenth_footer" href="mailto:s193165@student.pg.edu.pl"
+    >EMAIL</a
+  >
+  <a
+    class="fourteenth_footer"
+    href="https://github.com/zuzqqa"
+    target="_blank"
+    >GITHUB</a
+  >
+  <a
+    class="fifteenth_footer"
+    href="https://www.instagram.com/zuuzqqa/"
+    target="_blank"
+    >INSTAGRAM</a
+  >
+  <a class="seventeenth_footer" href="https://twitter.com/home" target="_blank"
+    >TWITTER</a
+  >
+  <a class="eighteenth_footer" href="#form_j">JOIN OUR COMMUNITY</a>
+
+  <button id="bute">SIGN UP!</button>
+</footer>
+
+   
+<div class="res_footer">
+  <br><br>
+  <button id="bute1">SIGN UP!</button>
+  <a class="fourth_footer" href="#top">STANDINGS</a>
+  <a class="eleventh_footer" href="contact.html">CONTACT</a>
+  <a
+    class="fourteenth_footer"
+    href="https://github.com/zuzqqa"
+    target="_blank"
+    >GITHUB</a
+  >
+  <br><br>
+</div>
+</body>
+</html>

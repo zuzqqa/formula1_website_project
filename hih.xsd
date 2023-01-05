@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+<xs:element name="hipertext" type="hipertextType"/> 
+	<xs:complexType name="hipertextType"> 
+		<xs:sequence>
+			<xs:element name="student" type="studentType" /> 	
+			<xs:element name="definition" type="definitionType"/>
+			<xs:element name="date" type="xs:date"/>
+			<xs:element name="drivers" type="driversType"/>
+			<xs:element name="teams" type="teamsType"/>	
+		</xs:sequence>
+	</xs:complexType>
+
+    <xs:attribute name="worldchampion">
+        <xs:simpleType> 
+			<xs:restriction base="xs:string">
+ 				<xs:enumeration value="yes"/>
+				<xs:enumeration value="no"/>
+			</xs:restriction>
+		</xs:simpleType>
+    </xs:attribute>
+
+	<xs:simpleType name="definitionType"> 
+		<xs:restriction base="xs:string">
+			<xs:minLength value="15"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="shortStringType"> 
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="longStringType"> 
+		<xs:restriction base="xs:string">
+			<xs:minLength value="11"/>
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+    <xs:simpleType name="driverID"> 
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([0-9]{4}-[0-9]{4}-[0-9]{4})|([0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{3})"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+	<xs:element name="image" type="adressType"/>
+	<xs:element name="link" type="adressType"/>
+	
+    <xs:group name="info"> 
+        <xs:sequence>
+            <xs:element name="nameMix" type="nameMixType"/>
+            <xs:element name="about">
+                <xs:complexType> 
+                    <xs:sequence>
+                        <xs:element name="description" type="longStringType"/>
+                        <xs:element name="championships" type="championships"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:group>
+    
+    <xs:complexType name="nameMixType" mixed="true"> 
+        <xs:sequence>
+            <xs:element name="name" maxOccurs="2" type="xs:string"/>
+            <xs:element name="position">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="1"/>
+                        <xs:maxInclusive value="3"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:any minOccurs="0"/> 
+        </xs:sequence>
+    </xs:complexType>
+
+	<xs:complexType name="studentType"> 
+		<xs:sequence>
+			<xs:element name="name" type="shortStringType" />	
+			<xs:element name="surname" type="shortStringType" />
+        </xs:sequence>
+	</xs:complexType>
+
+    <xs:complexType name="driversType">
+        <xs:sequence>
+            <xs:element name="driver" type="driverType" minOccurs="1" maxOccurs="3"/>
+        </xs:sequence>
+    </xs:complexType>
+
+	<xs:complexType name="achivementType"> 
+		<xs:sequence>
+			<xs:element name="title" type="shortStringType"/>
+			<xs:element name="description" type="xs:string"/>
+			<xs:element ref="image" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="link" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+    	<xs:attribute name="championship">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+ 					<xs:enumeration value="yes"/>
+					<xs:enumeration value="no"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="driverType"> 
+		<xs:complexContent>
+			<xs:extension base="studentType"> 
+					<xs:sequence>
+                        <xs:element name="number" type="unionType"/>
+                        <xs:element name="id" type="driverID"/>
+                        <xs:element name="position" type="xs:integer"/>
+                        <xs:element name="aboutDriver">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="age"/>
+									<xs:element name="country"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element ref="image" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element ref="link" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element name="achievements">
+						    <xs:complexType> 
+						        <xs:sequence>
+							        <xs:element name="achievement" type="achivementType" minOccurs="0" maxOccurs="unbounded"/>
+						        </xs:sequence>
+                                <xs:attribute name="wonArace" use="required">
+                                    <xs:simpleType> 
+					                    <xs:restriction base="xs:string">
+ 						                    <xs:enumeration value="yes"/>
+						                    <xs:enumeration value="no"/>
+					                    </xs:restriction>
+					                </xs:simpleType>
+                                </xs:attribute>
+						    </xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				<xs:attribute name="top3" use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+ 							<xs:enumeration value="yes"/>
+							<xs:enumeration value="no"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+                <xs:attribute name="top5" use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+ 							<xs:enumeration value="yes"/>
+							<xs:enumeration value="no"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+                <xs:attribute ref="worldchampion"/> 
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="teamsType"> 
+		<xs:sequence>
+			<xs:element name="team" minOccurs="3" maxOccurs="3">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:group ref="info" minOccurs="1"/> 
+						<xs:element ref="image" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element ref="link" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+                    <xs:attribute ref="worldchampion"/> 
+					<xs:attribute name="championship">
+						<xs:simpleType> 
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="yes"/>
+								<xs:enumeration value="no"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="adressType"> 
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="source" type="xs:anyURI" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+    <xs:simpleType name="championshipTitle"> 
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="2000"/>
+            <xs:maxInclusive value="2022"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="championshipTitles"> 
+        <xs:list itemType="championshipTitle"/> 
+    </xs:simpleType>
+
+    <xs:simpleType name="championships"> 
+        <xs:restriction base="championshipTitles">
+            <xs:length value="5"/> 
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="unionType"> 
+        <xs:union>
+            <xs:simpleType> 
+                <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="1"/>
+                    <xs:maxInclusive value="3"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType> 
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="One"/>
+                    <xs:enumeration value="Two"/>
+                    <xs:enumeration value="Three"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+</xs:schema>

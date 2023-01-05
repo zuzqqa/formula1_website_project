@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!ELEMENT hipertext (student, definition, date, drivers, teams)>
+<!ELEMENT student (name, surname)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT surname (#PCDATA)>
+<!ELEMENT definition (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT drivers (driver+)>
+<!ELEMENT driver (name, surname, number, id, position, aboutDriver, image, link, achievements)*>
+<!ATTLIST driver top3 (yes|no) #REQUIRED>
+<!ATTLIST driver top5 (yes|no) "no">
+<!ATTLIST driver worldchampion (yes|no) #REQUIRED>
+<!ELEMENT number (#PCDATA)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT position (#PCDATA)>
+<!ELEMENT aboutDriver (age, country)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT image (#PCDATA)>
+<!ENTITY % source "source CDATA">
+<!ATTLIST image %source; #REQUIRED>
+<!ELEMENT link (#PCDATA)>
+<!ATTLIST link %source; #REQUIRED>
+<!ELEMENT achievements (achievement)+>
+<!ATTLIST achievements wonArace (yes|no) #REQUIRED>
+<!ELEMENT achievement (title, description, image)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ATTLIST achievement championship (yes|no) #REQUIRED>
+<!ELEMENT teams (team+)>
+<!ELEMENT team (nameMix, about, (image|link))*>
+<!ELEMENT about (description, championships)>
+<!ELEMENT championships (#PCDATA)>
+<!ATTLIST team worldchampion (yes|no) #REQUIRED>
+<!ELEMENT nameMix (name+, position)>
